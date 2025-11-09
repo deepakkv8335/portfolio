@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Deepak - Portfolio</title>
+  <meta name="description" content="Deepak — Python/Django developer. Projects: ECOSORT, Fraud Detection, Tour Package Management System. Internship at Marklance Infotech." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#60a5fa;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071021 0%, #071827 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:24px;
+    }
+    a{color:var(--accent); text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:start}
+    @media (max-width:900px){ .container{grid-template-columns:1fr; padding:12px} }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+    }
+    .profile-photo{
+      width:120px;height:120px;border-radius:14px;background:linear-gradient(135deg,#1f2937,#111827);
+      display:block;overflow:hidden;margin:0 auto 14px; border:2px solid rgba(255,255,255,0.03);
+    }
+    .name{font-size:22px;font-weight:700;text-align:center;margin:6px 0}
+    .title{font-size:13px;color:var(--muted);text-align:center;margin-bottom:14px}
+    .contact{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px;margin-top:8px}
+    .contact a{display:inline-block}
+    .tech-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;justify-content:center}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    .main{display:flex;flex-direction:column;gap:20px}
+    h2{margin:0 0 10px 0;font-size:18px;color:#eaf2ff}
+    p.lead{color:var(--muted);margin:0 0 12px 0}
+    .section{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media (max-width:900px){ .projects{grid-template-columns:1fr} }
+    .project{
+      background:linear-gradient(180deg,#061226, rgba(255,255,255,0.01));
+      border-radius:10px;padding:14px;border:1px solid rgba(255,255,255,0.025);
+    }
+    .project h3{margin:0 0 8px 0;font-size:15px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+    .meta{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+    .meta span{font-size:12px;color:var(--muted);background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:8px}
+
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .job{display:flex;gap:12px}
+    .job .jd{flex:1}
+    .job .role{font-weight:600;font-size:14px}
+    .job .org{font-size:13px;color:var(--muted)}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    @media (max-width:900px){ .skills-grid{grid-template-columns:repeat(2,1fr)} }
+
+    .contact-form{display:grid;gap:8px}
+    input, textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color: #eaf2ff;font-size:13px}
+    button.cta{background:var(--accent);border:none;color:#06203b;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+    footer{margin-top:8px;color:var(--muted);font-size:13px;text-align:center}
+    /* small details */
+    .muted{color:var(--muted);font-size:13px}
+    .small{font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="card" aria-label="Sidebar with profile">
+      <div style="text-align:center">
+        <img class="profile-photo" src="p1.png" alt="Deepak Profile">
+      </div>
+
+      <div class="name">Deepak</div>
+      <div class="title">Python | Django | Full-Stack Developer</div>
+
+      <div class="contact">
+        <div class="small"><strong>Location:</strong> Ernakulam, India</div>
+        <div class="small"><strong>Email:</strong> <a href="mailto:youremail@example.com">deepakkv8335@gmsil.com</a></div>
+        <div class="small"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/deepakkv8335/" target="_blank" rel="noopener">linkedin.com/in/deepakkv8335</a></div>
+        <div class="small"><strong>Github:</strong> <a href="https://www.github.com/deepakkv8335" target="_blank">github.com/deepakkv8335</a></div>
+      </div>
+
+      <div style="margin-top:14px;text-align:center">
+        <div class="muted">Key skills</div>
+        <div class="tech-list" aria-hidden="false">
+          <span class="chip">Python</span>
+          <span class="chip">Django</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="section" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p class="lead">
+          I'm Deepak — a Python/Django full-stack developer who builds practical web apps and data-driven tools.
+          I completed a three-month internship at Marklance Infotech, Ernakulam and have built projects including ECOSORT (waste management platform) and a fraud-detection prototype using neural networks. I prefer writing modular Python scripts and using PyTorch for research/prototyping.
+        </p>
+        <p class="small">Available for internships, freelance, or full-time roles. Prefer straightforward technical work and value clean, testable code.</p>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Selected Projects</h2>
+        <div class="projects" role="list">
+          <article class="project" role="listitem">
+            <h3>ECOSORT — Garbage management web app</h3>
+            <p>Role: Full-stack developer. Built booking and vendor dashboards for waste pickup with 3 vendor categories and admin approval flows.</p>
+            <div class="meta">
+              <span>Stack: Django, HTML/CSS, JS</span>
+              <span>Status: In progress / deployable</span>
+            </div>
+          </article>
+
+          <article class="project" role="listitem">
+            <h3>Tour Package Management System</h3>
+            <p>Role: Internship project. Built features for package CRUD, booking flow, and admin panel during a 3-month internship at Marklance Infotech.</p>
+            <div class="meta">
+              <span>Stack: Python, Django</span>
+              <span>Company: Marklance Infotech</span>
+            </div>
+          </article>
+
+          <article class="project" role="listitem">
+            <h3>Misc: Scripts & Automations</h3>
+            <p>Utility scripts for Excel automation, data cleaning, and small web tools. Prefer Python scripts (not notebooks) for production readiness.</p>
+            <div class="meta">
+              <span>Stack: Python, openpyxl, pandas</span>
+              <span>Delivery: Scripts / CLI</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience & Education</h2>
+
+        <div class="timeline">
+          <div class="job">
+            <div class="jd">
+              <div class="role">Python Full Stack Developer — Marklance Infotech (Intern)</div>
+              <div class="org">Ernakulam — 3 month internship (completed)</div>
+              <div class="small">Worked on Tour Package Management System; backend + frontend features, migrations, and deployments.</div>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="jd">
+              <div class="role">Education</div>
+              <div class="org">BSc Computer Science</div>
+              <div class="small">Coursework: Computer Networks, Databases, Web Development.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <div class="skills-grid">
+          <div class="chip">Python</div>
+          <div class="chip">Django / DRF</div>
+          <div class="chip">PyTorch</div>
+          <div class="chip">REST APIs</div>
+          <div class="chip">JavaScript</div>
+          <div class="chip">HTML & CSS</div>
+          <div class="chip">SQL / Postgres</div>
+          <div class="chip">Git</div>
+          <div class="chip">Linux basics</div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p class="small">Want to work together or need the source code? Email me or connect on LinkedIn.</p>
+
+        <footer>
+          <div class="small">Built by Deepak — adjust content & links. Resume available on request.</div>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
